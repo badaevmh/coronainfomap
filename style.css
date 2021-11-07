@@ -1,0 +1,145 @@
+:root {
+  font-size: 16px;
+  font-family: 'Open Sans';
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --bg-primary: #23232e;
+  --bg-secondary: #141418;
+  --transition-speed: 600ms;
+}
+
+body {
+  color: black;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+
+  backdrop-filter: brightness(40%);
+}
+
+.bg-fon {
+  background-image: url(img/bgc.jpg);
+  background-size: cover;
+  background-position: top;
+}
+
+body::-webkit-scrollbar {
+  width: .7rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}
+
+main {
+  height: 94vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.title, .sub-title {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  font-family: Oswald;
+  font-size: 4rem;
+  margin-top: 0rem;
+  text-shadow:0 0 15px #141418;
+}
+
+.sub-title {
+  font-size: 2.5rem;
+  background-color: rgba(0, 0, 0, .6);
+}
+
+.title > span {
+	color: #EA2027;
+}
+
+a {text-decoration: none; color: inherit;}
+
+.navbar {
+	position: fixed;
+	bottom: 0;
+	width: 100vw;
+	display: flex;
+	justify-content: space-around;
+	background-color: #000;
+	color: #fff;
+	text-transform: uppercase;
+
+	font-family: 'Oswald Light';
+	font-size: 1.7rem;
+}
+
+.logo-text {
+	font-weight: bold;
+	color: #EA2027;
+}
+
+.nav-link {
+	position: relative;
+	padding: .5rem 0;
+}
+
+.nav-link::before {
+	content: "";
+	display: block;
+	height: 2px;
+	width: 0;
+	position: absolute;
+	bottom: 5px;
+	transition: width .3s linear;
+}
+
+.nav-link:nth-child(2)::before {background-color: #F79F1F;}
+.nav-link:nth-child(3)::before  {background-color: #EE5A24;}
+.nav-link:nth-child(4)::before  {background-color: #EA2027;}
+.nav-link:nth-child(5)::before  {background-color: #009432;}
+
+.nav-link:hover.nav-link::before {
+	width: 100%;
+}
+
+.active-link::before {
+	width: 100%;
+}
+
+@media (max-width: 1030px) {
+	:root {
+		font-size: 12px;
+	}
+}
+
+@media (max-width: 730px) {
+	:root {
+		font-size: 10px;
+	}
+
+	.logo-text {
+		display: none;
+	}
+}
+
+@media (max-width: 480px) {
+	:root {
+		font-size: 8px;
+	}
+}
